@@ -1,0 +1,16 @@
+
+  .card{
+    margin: 3%;
+    width: 15cm;
+  
+  }
+  
+  .h5{
+    text-decoration: none;
+  }
+  
+  .big-number{
+    font-size: xx-large;
+    font-style: bold;
+    text-shadow: black 1px 0 30px;
+  }

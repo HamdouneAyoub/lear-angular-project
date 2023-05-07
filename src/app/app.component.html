@@ -1,0 +1,13 @@
+<ng-container *ngIf="isHomePage()">
+    <navbar></navbar>
+    
+  </ng-container>
+  <ng-container *ngIf="isAdminPage()">
+    <app-admin-navbar></app-admin-navbar>
+    
+</ng-container>
+<router-outlet></router-outlet>
+<socialmedia></socialmedia>
+<app-footer></app-footer>
+
+

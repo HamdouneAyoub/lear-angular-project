@@ -1,0 +1,74 @@
+
+<nav class="navbar navbar-expand navbar-white bg px-2">
+    
+    
+    
+   
+    <a href="#" class="navbar-brand px-4">Lear Corporation sale</a>
+    <div class="navbar-collapse">
+    
+      <ul class="navbar-nav me-auto">
+    <li class="nav-item ">
+      <a class="nav-link" role="button" routerLink="/Admin">
+        Dashboard
+       
+        
+      </a>
+      
+    </li>
+    
+    <li class="nav-item ">
+      <a href="#" class="nav-link" role="button" routerLink="/Admin/Produit">
+       Products
+      </a>
+      
+    </li>
+    
+    <li class="nav-item ">
+      <a href="#" class="nav-link" role="button" routerLink="/Admin/Tasks">
+        Users
+      </a>
+      
+    </li>
+    <li class="nav-item ">
+      <a href="#" class="nav-link" role="button" routerLink="/Admin/Clients">
+        Clients
+      </a>
+      
+    </li>
+    <li class="nav-item ">
+      <a href="#" class="nav-link" role="button" routerLink="/Admin/Projects">
+        Projects
+      </a>
+      
+    </li>
+    
+    
+      </ul>
+    </div>
+    <form class="d-flex me-5">
+    
+    </form>
+    <div class="profile-logo dropstart">
+        <ul class="navbar-nav me-auto">
+            <li>
+                <button class="btn btn-outline-dark" routerLink="/Admin/Profil">
+                   {{authService.loginedUser!.username}}
+                </button>
+                
+           </li>
+                <a  class="nav-link" role="button" (click)="handleLogout()">
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
+           <li>
+
+           </li>
+           <li>
+
+           </li>
+       
+
+    </ul>
+    
+    </div>
+</nav>

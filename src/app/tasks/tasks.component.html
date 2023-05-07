@@ -1,0 +1,49 @@
+<div class="container mt-5" style="margin-bottom: 7cm;">
+    <ng-template #errors>
+        <div class="text-danger">
+            {{errorMessage}}
+        </div>
+    </ng-template>
+    <div class="card" *ngIf="users;else errors">
+        <div class="card-header center  text-white bg-dark"><div style="text-align: center;"> Users List</div></div>
+        <div class="card-body text-white bg-secondary">
+          
+            <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchUsers()">
+                <div class="input-group">
+                    <label class="input-group-text" for="">keyword</label>
+                    <input type="text" class="form-control" formControlName="keyword">
+                    <button class="btn btn-info">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Password</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+
+                    <tr *ngFor="let user of users">
+                        <td>{{user.userId}}</td>
+                    <td>{{user.username}}</td>
+                    <td *ngIf="loginService.hasRole('ADMIN')">{{user.password}}</td>
+                    
+                    <td class="">
+                        
+                    </td>
+                    <th></th>
+                    
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>
